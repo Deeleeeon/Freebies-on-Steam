@@ -33,13 +33,11 @@ async def autopost_task():
     link = "https://gg.deals" + game["urls"]["web"]
     image = game["image"]
 
-    caption = (
-        f"🎮 *{title}*
-"
-        f"💸 ~~{price_old}~~ → *{price_new}* ({discount}% OFF)
-"
-        f"🔗 [Смотреть на GG.deals]({link})"
-    )
+caption = (
+    f"🎮 *{title}*\n"
+    f"💸 ~~{price_old}~~ → *{price_new}* ({discount}% OFF)\n"
+    f"🔗 [Смотреть на GG.deals]({link})"
+)
 
     buttons = [[InlineKeyboardButton("🔗 Перейти", url=link)]]
     markup = InlineKeyboardMarkup(buttons)
